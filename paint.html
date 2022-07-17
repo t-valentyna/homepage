@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1818/1818401.png">
+    </head>
+    <body style="height: 2000px;">
+      <nav class="navbar navbar-dark fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <nav class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Досліджуй світ котиків</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="song.html">Весняні котики</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="search.html">Знайди свого котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="paint.html">Малюємо котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Темна тема</label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div style="height: 60px"></div>
+      <h1>
+        Крути вниз
+      </h1>
+      <div style="margin-left: auto; margin-right: auto; width: 400px;">
+        <svg id="mySVG">
+          <path fill="none" stroke="#6c757d" stroke-width="3" id="triangle" d="M100 300 Q -20 200 100 100 L100 0 L150 100 Q 175 85 200 100 L250 0 L250 100 Q 360 200 250 300 Z"/>
+          <path fill="none" stroke="#6c757d" stroke-width="3" d="M100 175 Q 125 150 150 175"/>
+          <path fill="none" stroke="#6c757d" stroke-width="3" d="M200 175 Q 225 150 250 175"/>
+          <polygon points="175 250, 150 225, 200 225" fill="#6c757d"/>
+          <path fill="none" stroke="#6c757d" stroke-width="3" d="M125 250 Q 150 275 175 250"/>
+          <path fill="none" stroke="#6c757d" stroke-width="3" d="M175 250 Q 200 275 225 250"/>
+        </svg>
+      </div>
+
+      <script>
+        // Get the id of the <path> element and the length of <path>
+        var triangle = document.getElementById("triangle");
+        var length = triangle.getTotalLength();
+
+        // The start position of the drawing
+        triangle.style.strokeDasharray = length;
+
+        // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+        triangle.style.strokeDashoffset = length;
+
+        // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+        window.addEventListener("scroll", myFunction);
+
+        function myFunction() {
+          var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+          var draw = length * scrollpercent;
+
+          // Reverse the drawing (when scrolling upwards)
+          triangle.style.strokeDashoffset = length - draw;
+        }
+        </script>
+
+    </body>
+    <script>
+      let body = document.querySelector('body');
+      let h1 = document.querySelector('h1');
+      let x = 0;
+      document.querySelector('#flexSwitchCheckDefault').addEventListener('click', function()
+      {
+          switch(x)
+          {
+            case 0:
+              body.style.backgroundColor = '#1c1c1c';
+              body.style.color = '#f1e4f3';
+              h1.style.color = '#f1e4f3';
+              x = 1;
+              break;
+            case 1:
+              body.style.backgroundColor = '#f1e4f3';
+              body.style.color = '#6c757d';
+              h1.style.color = '#1c1c1c';
+              x = 0;
+              break;
+          }
+      });
+    </script>
+</html>
