@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1818/1818401.png">
+    </head>
+    <body>
+      <nav class="navbar navbar-dark fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <nav class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Досліджуй світ котиків</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="song.html">Весняні котики</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="search.html">Знайди свого котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="paint.html">Малюємо котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Темна тема</label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div style="height: 60px"></div>
+      <h1>
+        Котики в інтернеті
+      </h1>
+      <p style="text-align: center;">
+        Знайди свого!
+      </p>
+      <div class="text-center">
+        <form action="https://www.google.com/search" class="mt-4" method="get">
+            <input autocomplete="off" autofocus class="form-control form-control-lg mb-4 mx-auto w-50" name="q" placeholder="Няшний кіт" type="search">
+            <button class="btn btn-light" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                    <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+                    <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"/>
+                </svg>
+            </button>
+        </form>
+      </div>
+      <div style="height: 60px"></div>
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://i.pinimg.com/550x/1e/25/75/1e2575e1d77bc20afaf7a3d3ec10f52d.jpg" class="card-img-top" alt="cat&cup">
+                    <div class="card-body">
+                      <p class="card-text">Арт-котики</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://dnipro.depo.ua/uploads/posts/20220308/750x/zSxA85dLvoUquHkQyaf7oES2wgrDXeu3E25wM1eS.jpeg" class="card-img-top" alt="cat&gun">
+                    <div class="card-body">
+                      <p class="card-text">Мальовані котики</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCV__IW-ZU3vCPYmC1iZw8hjQMKIC99MAAmg&usqp=CAU" class="card-img-top" alt="cat&photo">
+                    <div class="card-body">
+                      <p class="card-text">Фотографії котиків</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://content1.rozetka.com.ua/goods/images/big/75931154.jpg" class="card-img-top" alt="cat&cover">
+                    <div class="card-body">
+                      <p class="card-text">Принти з котиками</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+
+    </body>
+    <script>
+      let body = document.querySelector('body');
+      let h1 = document.querySelector('h1');
+      let x = 0;
+      document.querySelector('#flexSwitchCheckDefault').addEventListener('click', function()
+      {
+          switch(x)
+          {
+            case 0:
+              body.style.backgroundColor = '#1c1c1c';
+              body.style.color = '#f1e4f3';
+              h1.style.color = '#f1e4f3';
+              x = 1;
+              break;
+            case 1:
+              body.style.backgroundColor = '#f1e4f3';
+              body.style.color = '#6c757d';
+              h1.style.color = '#1c1c1c';
+              x = 0;
+              break;
+          }
+      });
+    </script>
+</html>
