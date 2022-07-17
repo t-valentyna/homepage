@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1818/1818401.png">
+    </head>
+    <body>
+      <nav class="navbar navbar-dark fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <nav class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Досліджуй світ котиків</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="song.html">Весняні котики</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="search.html">Знайди свого котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="paint.html">Малюємо котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Темна тема</label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div style="height: 60px"></div>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img src="http://pm1.narvii.com/6762/1ddcb2132a53d8274034faf86f9baaea31ec7fbcv2_00.jpg" class="d-block w-100" alt="cat&halloween">
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://c.tenor.com/X1MxQbJSRHYAAAAC/pusheen-cat.gif" class="d-block w-100" alt="cat&phone">
+              </div>
+              <div class="carousel-item">
+                <img src="https://a.allegroimg.com/s512/11896f/75b677574843ba846fd9c8833e4d/Zestaw-Obraz-MALOWANIE-PO-NUMERACH-Kot-40x50-EAN-5903772700152" class="d-block w-100" alt="painted-cat">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="mainPart">
+          <h1>
+            Котики рулять
+          </h1>
+          <p>
+            Кіт (Felis) — рід хижих ссавців родини котових (Felidae). У деяких старіших системах класифікації до нього зараховували всіх представників малих кішок (Felinae), проте зараз безпосередньо до роду відносяться лише кілька видів невеликих тварин, що мешкають у Євразії та Африці.
+          </p>
+          <p>
+            Найвідомішим представником цього роду є свійський кіт — підвид кота лісового.
+          </p>
+          <p>
+            За розміром найменшим представником роду є вид мураховий тигр довжина тіла і голови якого становить від 38 до 44 см. Найбільшим є кіт очеретяний із довжиною тіла і голови від 62 до 76 см. Види котів (Felis) мешкають у широкому різновиді природних середовищ, від болотяних до пустель, і харчуються здебільшого малими мишоподібними, птахами й іншими дрібними тваринами.
+          </p>
+          <p>
+            Генетичні дослідження показують, що Кіт (Felis), Манул (Otocolobus) і Азійський кіт (Prionailurus) походять від Євразійського прародителя що існував близько 6,2 мільйонів років тому, і що види Котів розділилися від 3,04 до 0.99 мільйонів років тому.
+          </p>
+        </div>
+
+    </body>
+    <script>
+      let body = document.querySelector('body');
+      let h1 = document.querySelector('h1');
+      let x = 0;
+      document.querySelector('#flexSwitchCheckDefault').addEventListener('click', function()
+      {
+          switch(x)
+          {
+            case 0:
+              body.style.backgroundColor = '#1c1c1c';
+              body.style.color = '#f1e4f3';
+              h1.style.color = '#f1e4f3';
+              x = 1;
+              break;
+            case 1:
+              body.style.backgroundColor = '#f1e4f3';
+              body.style.color = '#6c757d';
+              h1.style.color = '#1c1c1c';
+              x = 0;
+              break;
+          }
+      });
+    </script>
+</html>
