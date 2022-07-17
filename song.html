@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1818/1818401.png">
+    </head>
+    <body>
+      <nav class="navbar navbar-dark fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <nav class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Досліджуй світ котиків</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="song.html">Весняні котики</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="search.html">Знайди свого котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <a class="nav-link active" aria-current="page" href="paint.html">Малюємо котика</a>
+          </div>
+          <div class="p-3 mb-2 bg-secondary">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Темна тема</label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div style="height: 60px"></div>
+      <h1>
+        Весняні котики
+      </h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-7" style="margin-left: auto; margin-right: auto;">
+            <iframe width="840" height="472.5" src="https://www.youtube.com/embed/vy5ShdXJxrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col">
+            <pre class="songwords">
+                Сірі-сірі котики,
+                Сірі, наче дим,
+                Посідали котики
+                У рядок один.
+                Розпушились котики,
+                Вже їм не до сну –
+                Виглядають котики
+                Із кущів весну.
+
+                Приспів:
+                Котики, котики,
+                Хто вас так назвав?
+                Може кому, котики,
+                Ви сказали: "Няв!"
+                Може кому, котики,
+                Ви сказали: "Мур!"
+                Ну признайтесь котики:
+                Хто, коли це чув?
+
+                Пахнуть, пахнуть котики
+                Теплим вітерцем,
+                Пахнуть, пахнуть котики
+                Ніжним деревцем,
+                Пахнуть, пахнуть котики
+                Світлом і добром,
+                Пахнуть, пахнуть котики
+                Маминим теплом.
+
+                Приспів.
+
+                Няв! Мур!
+
+                Приспів. (2)</pre>
+          </div>
+        </div>
+      </div>
+
+    </body>
+    <script>
+      let body = document.querySelector('body');
+      let h1 = document.querySelector('h1');
+      let x = 0;
+      document.querySelector('#flexSwitchCheckDefault').addEventListener('click', function()
+      {
+          switch(x)
+          {
+            case 0:
+              body.style.backgroundColor = '#1c1c1c';
+              body.style.color = '#f1e4f3';
+              h1.style.color = '#f1e4f3';
+              x = 1;
+              break;
+            case 1:
+              body.style.backgroundColor = '#f1e4f3';
+              body.style.color = '#6c757d';
+              h1.style.color = '#1c1c1c';
+              x = 0;
+              break;
+          }
+      });
+    </script>
+</html>
